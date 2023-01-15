@@ -1,0 +1,11 @@
+{% if Upcoming_pay %}
+    <ul>
+    {% for Alls in Upcoming_pay %}
+    <li><a href="{% url 'split:upcoming' %}">{{ Fost.name}} with cost={{Fixed.cost}}</a></li> 
+    <li><a href="{% url 'split:upcoming' %}">{{ Vost.name}} with cost={{Vost.cost}}</a></li> 
+    <li><a href="{% url 'split:upcoming' %}">{{ eost.name}} with cost={{eost.cost}}</a></li> 
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No payments to come.</p>
+{% endif %}
